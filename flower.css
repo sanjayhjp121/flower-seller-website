@@ -294,3 +294,6 @@ section .title::after {
 	grid-template-columns: 1fr 1fr;
 }
 
+@media screen and (max-width: 720px){
+	
+}
