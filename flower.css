@@ -1,12 +1,14 @@
-* 
-{
+*
+ {
     margin:0px;
     padding:0px;
 
 }
 
+
+
 /* utility class*/
-.my20 {
+ .my20 {
     margin-top:20px;
 }
 .my8{
@@ -53,7 +55,11 @@
 }
 .end_section li {
     display: inline;
-    list-style-type: none;    
+    list-style-type: none;
+}
+
+.end_section li a{
+	color: #333 !important;
 }
 
 /* Designing the main section of the page*/
@@ -66,11 +72,6 @@
     margin-left:2%;
     opacity: 0.8;
 }
-
-.review_section{
-	margin: 1rem auto;
-}
-
 .bouquet_review {
     display:flex;
     justify-content: space-around;
@@ -79,7 +80,7 @@
     width:90%;
     margin-left:2%;
     opacity: 0.8;
-    
+
 }
 .event_review {
     display:flex;
@@ -105,6 +106,8 @@
     opacity: 0.8;
 }
 
+
+
 .load_morebutton {
     margin-left: 45%;
 }
@@ -121,8 +124,22 @@ main {
     background: url('./images/5480712.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    
+
 }
+
+.follow ul li{
+	list-style: none;
+}
+.follow{
+	padding: 20px;
+}
+
+.follow a{
+	color: #333;
+	list-style: none;
+	text-decoration: none;
+}
+
 
 
 
@@ -170,7 +187,7 @@ section .title::after {
 	padding: 0 5px;
 	background: #fff;
 	transform: translateX(-50%);
-} 
+}
 .contact .contact-content .column {
 	width: calc(50% - 30px);
 }
@@ -288,12 +305,183 @@ section .title::after {
 	color: rgb(11, 163, 156);
 	background: none;
 }
+/* responsive media query start */
+ @media (max-width: 947px) {
 
-.column .left .form {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
+	.home .home-content .left img {
+		height: 150px;
+		width: 150px;
+		object-fit: center;
+		border-radius: 150px;
+		margin-top: 29%;
+	}
+	.home .home-content .text-2 {
+		font-size: 70px;
+	}
+	.home .home-content .text-3 {
+		font-size: 35px;
+	}
+	.home .home-content a {
+		font-size: 23px;
+		padding: 10px 30px;
+	}
+	.max-width {
+		max-width: 930px;
+	}
+	.contact .contact-content .column {
+		width: 100%;
+		margin-bottom: 35px;
+		margin-left: 5%;
+	}
+
+	.review_section .reviews .review .review1{
+		width: 150px;
+	}
+
+	.review_section .reviews .review2{
+		display: none;
+		width: 0;
+		height: 0;
+	}
+
+	.photo_section{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	 .photo_section .img1{
+		width: 200px;
+	}
+
+	.photo_section .img2{
+		display: none;
+	}
+
+	 .photo_section .img3{
+		display: none;
+	}
+
+
+}
+@media (max-width: 690px) {
+	.max-width {
+		padding: 0 23px;
+	}
+	.home .home-content .text-2 {
+		font-size: 60px;
+	}
+	.home .home-content .text-3 {
+		font-size: 32px;
+	}
+	.home .home-content a {
+		font-size: 20px;
+	}
 }
 
-@media screen and (max-width: 720px){
-	
+@media (max-width: 500px) {
+	.home .home-content .text-2 {
+		font-size: 50px;
+	}
+	.home .home-content .text-3 {
+		font-size: 27px;
+	}
+	.contact .right form .fields {
+		flex-direction: column;
+	}
+	.contact .right form .name,
+	.contact .right form .email {
+		margin: 0;
+	}
+	.scroll-up-btn {
+		right: 15px;
+		bottom: 15px;
+		height: 38px;
+		width: 35px;
+		font-size: 23px;
+		line-height: 38px;
+	}
+  .menu{
+    background: #ece4dd;
+  }
+}
+@media(max-width: 500x){
+	.end_section {
+		margin-top: 20px;
+	}
+	.end_section li {
+		display: block;
+		list-style-type: none;
+	}
+}
+/* html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+html {
+    font-family: "helvetica neue", sans-serif;
+} */
+
+.nav {
+    border-bottom: 1px solid #EAEAEB;
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+.menu {
+    margin: 0 30px 0 0;
+
+}
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: gray;
+    margin: 0 10px;
+    line-height: 70px;
+}
+
+span {
+    color: #54D17A;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 26px;
+    line-height: 70px;
+    display: none !important;
+    width: 26px;
+    float: right;
+}
+#toggle {
+    display: none;
+}
+
+.abcd{
+	display: flex;
+
+}
+
+
+@media  (max-width: 800px) {
+    label {
+        display: block !important;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+    .menu a {
+        display: block;
+        border-bottom: 1px solid #EAEAEB;
+        margin: 0;
+
+    }
+    #toggle:checked + .menu {
+        display: block;
+    }
+
+
 }
